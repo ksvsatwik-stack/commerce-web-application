@@ -1,14 +1,18 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const Order = require("../models/Order");
 
-let orders = [];
-
-router.post('/', (req, res) => {
-  orders.push(req.body);
-  res.send("Order Placed Successfully");
+router.post("/", async (req, res) => {
+  const order = new Order(req.body);
+  await order.save();
+  res.json(order);
 });
 
-router.get('/', (req, res) => {
+router.get("/:userId", async (req, res) => {
+  const orders = await Order.find({
+    userId: req.params.userId
+  });
+
   res.json(orders);
 });
 
