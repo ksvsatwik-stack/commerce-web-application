@@ -1,9 +1,13 @@
-class Order {
-  constructor(id, customer, total) {
-    this.id = id;
-    this.customer = customer;
-    this.total = total;
-  }
-}
+const mongoose = require("mongoose");
 
-module.exports = Order;
+const OrderSchema = new mongoose.Schema({
+  userId: String,
+  products: Array,
+  totalAmount: Number,
+  status: {
+    type: String,
+    default: "Pending"
+  }
+});
+
+module.exports = mongoose.model("Order", OrderSchema);
