@@ -1,31 +1,18 @@
-const cart =
-  JSON.parse(localStorage.getItem("cart")) || [];
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-const container =
-  document.getElementById("cart-items");
+<h1>Shopping Cart</h1>
 
-let total = 0;
+<div id="cart-items"></div>
 
-if (cart.length === 0) {
-  container.innerHTML = "<h3>Your Cart is Empty</h3>";
-} else {
+<a href="checkout.html" class="btn">Proceed to Checkout</a>
 
-  let html = "<h2>Cart Items</h2>";
+<script src="js/cart.js"></script>
 
-  cart.forEach(item => {
-    total += item.price;
-
-    html += `
-      <div class="product-card">
-        <h3>${item.name}</h3>
-        <p>Price: ₹${item.price}</p>
-      </div>
-    `;
-  });
-
-  html += `
-    <h3>Total Amount: ₹${total}</h3>
-  `;
-
-  container.innerHTML = html;
-}
+</body>
+</html>
