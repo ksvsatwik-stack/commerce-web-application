@@ -1,13 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const Product = require("../models/Product");
 
-let products = [
-  { id: 1, name: "Wireless Mouse", price: 500 },
-  { id: 2, name: "Keyboard", price: 800 }
-];
-
-router.get('/', (req, res) => {
+router.get("/", async (req, res) => {
+  const products = await Product.find();
   res.json(products);
+});
+
+router.post("/", async (req, res) => {
+  const product = new Product(req.body);
+  await product.save();
+  res.json(product);
 });
 
 module.exports = router;
