@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Checkout</h1>
+
+<form id="checkoutForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <button type="submit">Place Order</button>
+</form>
+
+<script>
+document.getElementById("checkoutForm")
+.addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Order Placed Successfully!");
+});
+</script>
+
+</body>
+</html>
