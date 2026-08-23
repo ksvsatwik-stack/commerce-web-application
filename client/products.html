@@ -1,16 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Products</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<h1>Products</h1>
+<header>
 
-<div id="product-list" class="products"></div>
+    <div class="logo">
+        🛍️ E-Commerce Store
+    </div>
 
-<script src="js/app.js"></script>
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="cart.html">Cart 🛒</a>
+
+        <a href="login.html">Login</a>
+
+    </nav>
+
+</header>
+
+
+<section class="products-section">
+
+    <h2>Our Products 🛍️</h2>
+
+    <div class="product-grid">
+
+
+        <!-- Product 1 -->
+
+        <div class="product-card">
+
+            <img src="images/phone.jpg"
+                 alt="Smartphone">
+
+            <div class="product-info">
+
+                <h3>Smartphone</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    ₹25,999
+                </div>
+
+                <button class="btn"
+                        onclick="addToCart('Smartphone', 25999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 2 -->
+
+        <div class="product-card">
+
+            <img src="images/shoes.jpg"
+                 alt="Running Shoes">
+
+            <div class="product-info">
+
+                <h3>Running Shoes</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <div class="price">
+                    ₹2,999
+                </div>
+
+                <button class="btn"
+                        onclick="addToCart('Running Shoes', 2999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 3 -->
+
+        <div class="product-card">
+
+            <img src="images/headphones.jpg"
+                 alt="Headphones">
+
+            <div class="product-info">
+
+                <h3>Wireless Headphones</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    ₹1,499
+                </div>
+
+                <button class="btn"
+                        onclick="addToCart('Wireless Headphones', 1499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 4 -->
+
+        <div class="product-card">
+
+            <img src="images/laptop.jpg"
+                 alt="Laptop">
+
+            <div class="product-info">
+
+                <h3>Laptop</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    ₹59,999
+                </div>
+
+                <button class="btn"
+                        onclick="addToCart('Laptop', 59999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 5 -->
+
+        <div class="product-card">
+
+            <img src="images/watch.jpg"
+                 alt="Smart Watch">
+
+            <div class="product-info">
+
+                <h3>Smart Watch</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+
+                <div class="price">
+                    ₹3,499
+                </div>
+
+                <button class="btn"
+                        onclick="addToCart('Smart Watch', 3499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 6 -->
+
+        <div class="product-card">
+
+            <img src="images/camera.jpg"
+                 alt="Camera">
+
+            <div class="product-info">
+
+                <h3>Digital Camera</h3>
+
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <div class="price">
+                    ₹39,999
+                </div>
+
+                <button class="btn"
+                        onclick="addToCart('Digital Camera', 39999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 E-Commerce Store</p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
